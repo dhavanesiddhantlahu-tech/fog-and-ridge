@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhavanesiddhantlahu-tech.github.io/fog-and-ridge/sitemap.xml

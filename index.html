@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Search Engine Meta Tags -->
+  <title>The Fog & Ridge | Field Notes, Mountain Solitude & Alpine Trails</title>
+  <meta name="title" content="The Fog & Ridge | Field Notes, Mountain Solitude & Alpine Trails" />
+  <meta name="description" content="An independent nature journal documenting morning mist, quiet ridgelines, alpine terrain, and gear philosophies for the unhurried wanderer." />
+  <meta name="keywords" content="nature journal, mountain hiking, trail notes, mist trails, backpacking, alpine solitude, ridge walks" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://dhavanesiddhantlahu-tech.github.io/fog-and-ridge/" />
+
+  <!-- Social Graph Meta Tags (OpenGraph & Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dhavanesiddhantlahu-tech.github.io/fog-and-ridge/" />
+  <meta property="og:title" content="The Fog & Ridge | Field Notes & Alpine Trails" />
+  <meta property="og:description" content="Dated dispatches on high summits, misty ridge walks, and silent mountain air." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Site Verification Tag Placeholder (Paste your Google token here when ready) -->
+  <!-- <meta name="google-site-verification" content="PASTE_YOUR_GSC_TAG_HERE" /> -->
+
+  <!-- Google Fonts: Editorial Typeface Pairings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --pine: #1b382b;
+      --pine-dark: #11241b;
+      --pine-tint: #2a5340;
+      --accent: #b25832;
+      --text: #212623;
+      --muted: #647069;
+      --border: #e2ddd5;
+      --tag-bg: #eaf1ed;
+      --tag-text: #1d4d35;
+      --shadow-sm: 0 2px 8px rgba(18, 36, 27, 0.04);
+      --shadow-md: 0 10px 24px rgba(18, 36, 27, 0.08);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.16);
+      --max-w: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Panoramic Header Banner */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(180deg, rgba(17, 36, 27, 0.35) 0%, rgba(17, 36, 27, 0.85) 100%),
+                  url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 2rem 1.5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.76rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #d1ded6;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-size: 1.35rem;
+      color: #e4ebe6;
+      max-width: 640px;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Sticky Navigation */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: var(--pine);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--accent);
+    }
+
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .indicator-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    }
+
+    /* 2-Column Classic Magazine Layout */
+    .container {
+      max-width: var(--max-w);
+      margin: 2.8rem auto 5rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Search Bar */
+    .search-wrap {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1.05rem 1.25rem 1.05rem 3.2rem;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #ffffff;
+      font-size: 0.95rem;
+      color: var(--text);
+      outline: none;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--pine);
+      box-shadow: 0 0 0 3px rgba(27, 56, 43, 0.08);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 1.15rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      stroke: var(--muted);
+    }
+
+    /* Grid of Editorial Stories */
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .story-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      cursor: pointer;
+    }
+
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .story-thumb-wrap {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+      background: #e4dfd6;
+    }
+
+    .story-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .story-card:hover .story-thumb {
+      transform: scale(1.04);
+    }
+
+    .story-cat-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(17, 36, 27, 0.85);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .story-body {
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .story-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .story-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--pine-dark);
+      margin-bottom: 0.7rem;
+    }
+
+    .story-excerpt {
+      font-size: 0.94rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
+      flex-grow: 1;
+    }
+
+    .story-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .tag-cluster {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 12px;
+    }
+
+    .read-cta {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    /* Right Sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .widget {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .widget-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1rem;
+      color: var(--pine);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .widget-text {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag-filter-btn {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.8rem;
+      border-radius: 20px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .tag-filter-btn:hover, .tag-filter-btn.active {
+      background: var(--pine);
+      color: #ffffff;
+    }
+
+    .recent-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .recent-link {
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .recent-img {
+      width: 58px;
+      height: 58px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .recent-link h4 {
+      font-size: 0.9rem;
+      color: var(--pine);
+      line-height: 1.35;
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+
+    .recent-link:hover h4 {
+      color: var(--accent);
+    }
+
+    .recent-link span {
+      font-size: 0.76rem;
+      color: var(--muted);
+    }
+
+    /* Modal Article Reader */
+    .article-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 36, 27, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      overflow-y: auto;
+      padding: 2.5rem 1rem;
+    }
+
+    .modal-sheet {
+      max-width: 840px;
+      margin: 1.5rem auto;
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: fadeIn 0.25s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .close-button {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.15s;
+    }
+
+    .close-button:hover {
+      background: #ffffff;
+      color: var(--accent);
+    }
+
+    .modal-banner {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-body {
+      padding: 2.8rem 3.2rem 4rem;
+    }
+
+    .modal-meta {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .modal-heading {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--pine-dark);
+      line-height: 1.25;
+      margin-bottom: 1.6rem;
+    }
+
+    .article-copy {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 1.24rem;
+      line-height: 1.8;
+      color: #272f2b;
+    }
+
+    .article-copy p {
+      margin-bottom: 1.6rem;
+    }
+
+    .article-copy h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: var(--pine);
+      margin: 2.4rem 0 0.9rem;
+    }
+
+    .article-copy blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 0.75rem 1.4rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--pine-tint);
+      background: var(--tag-bg);
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-title {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: var(--pine);
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 290px;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-subtitle {
+        font-size: 1.15rem;
+      }
+      .stories-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-body {
+        padding: 2rem 1.5rem;
+      }
+      .modal-heading {
+        font-size: 1.85rem;
+      }
+      .modal-banner {
+        height: 240px;
+      }
+    }
+  </style>
+
+  <!-- Schema.org Article & Publication Indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "The Fog & Ridge",
+    "url": "https://dhavanesiddhantlahu-tech.github.io/fog-and-ridge/",
+    "description": "An independent nature journal documenting morning mist, quiet ridgelines, alpine terrain, and outdoor philosophies.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Fog & Ridge Journal"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Atmospheric Hero Header -->
+  <header class="hero">
+    <div class="hero-badge">⛰️ Field Journal & Dispatch</div>
+    <h1 class="hero-title">The Fog & Ridge</h1>
+    <p class="hero-subtitle">Dated notes on trails, summits, and quiet mountain air.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html">All Field Notes</a></li>
+        <li><a href="#about" onclick="scrollToWidget('about')">About The Journal</a></li>
+        <li><a href="#topics" onclick="scrollToWidget('topics')">Browse Topics</a></li>
+      </ul>
+      <div class="nav-status">
+        <span class="indicator-dot"></span> Field Despatches Active
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    
+    <!-- Left Column: Search & Stories -->
+    <main>
+      
+      <!-- Instant Search Input -->
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search by trail, gear, summit, weather, or keywords..." onkeyup="filterArticles()" />
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="stories-grid" id="articlesGrid">
+
+        <!-- Card 1 -->
+        <article class="story-card" data-tags="trails fog monsoon" onclick="openStory(1)">
+          <div class="story-thumb-wrap">
+            <img class="story-thumb" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="Foggy Mountain Trail" />
+            <span class="story-cat-badge">Field Essay</span>
+          </div>
+          <div class="story-body">
+            <div class="story-meta">
+              <span>Sept 24, 2026</span> • <span>4 min read</span>
+            </div>
+            <h2 class="story-title">The Early Morning Ridge in Thick Monsoon Fog</h2>
+            <p class="story-excerpt">
+              When visibility collapses to ten yards, the trail slows down and every pine needle carries weight. What happens to focus when the distant panoramic view vanishes?
+            </p>
+            <div class="story-footer">
+              <div class="tag-cluster">
+                <span class="pill">trails</span>
+                <span class="pill">fog</span>
+              </div>
+              <span class="read-cta">Read Note →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="story-card" data-tags="gear boots minimalism" onclick="openStory(2)">
+          <div class="story-thumb-wrap">
+            <img class="story-thumb" src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80" alt="Trail Backpack and Hiking Boots" />
+            <span class="story-cat-badge">Gear Notes</span>
+          </div>
+          <div class="story-body">
+            <div class="story-meta">
+              <span>Aug 18, 2026</span> • <span>3 min read</span>
+            </div>
+            <h2 class="story-title">What Stays in the 18L Daypack (And What I Left Behind)</h2>
+            <p class="story-excerpt">
+              Years of carrying heavy cameras and redundant gadgets proved one thing: unnecessary weight steals the pure joy of the climb. Here is the distilled kit.
+            </p>
+            <div class="story-footer">
+              <div class="tag-cluster">
+                <span class="pill">gear</span>
+                <span class="pill">minimalism</span>
+              </div>
+              <span class="read-cta">Read Note →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="story-card" data-tags="silence summits solo" onclick="openStory(3)">
+          <div class="story-thumb-wrap">
+            <img class="story-thumb" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Mountain Peak Solitude" />
+            <span class="story-cat-badge">Solitude</span>
+          </div>
+          <div class="story-body">
+            <div class="story-meta">
+              <span>July 30, 2026</span> • <span>5 min read</span>
+            </div>
+            <h2 class="story-title">The Quietest Acre on the Northern Ridge</h2>
+            <p class="story-excerpt">
+              Far above the valley roads sits an ancient stone shelf where acoustic reverberation drops to zero. Notes on why real silence is so disorienting at first.
+            </p>
+            <div class="story-footer">
+              <div class="tag-cluster">
+                <span class="pill">silence</span>
+                <span class="pill">summits</span>
+              </div>
+              <span class="read-cta">Read Note →</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="story-card" data-tags="coffee camp morning" onclick="openStory(4)">
+          <div class="story-thumb-wrap">
+            <img class="story-thumb" src="https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=900&q=80" alt="Campfire Coffee Kettle" />
+            <span class="story-cat-badge">Ritual</span>
+          </div>
+          <div class="story-body">
+            <div class="story-meta">
+              <span>June 12, 2026</span> • <span>3 min read</span>
+            </div>
+            <h2 class="story-title">Coffee at 6:00 AM in a Cold Enamel Mug</h2>
+            <p class="story-excerpt">
+              Water boils slower in thin, frosty air. But when your hands are numb from packing up tent stakes, that first dark sip does what nothing else can.
+            </p>
+            <div class="story-footer">
+              <div class="tag-cluster">
+                <span class="pill">coffee</span>
+                <span class="pill">camp</span>
+              </div>
+              <span class="read-cta">Read Note →</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results Feedback -->
+      <div id="noResults" style="display:none; text-align:center; padding: 3rem 1.5rem; background: #ffffff; border-radius: 12px; border: 1px solid var(--border); margin-top: 1.5rem;">
+        <p style="font-family:'Newsreader', serif; font-size:1.2rem; font-style:italic; color: var(--muted);">No trail notes found matching your criteria.</p>
+        <button class="tag-filter-btn" onclick="resetSearch()" style="margin-top: 1rem;">Reset Filter</button>
+      </div>
+
+    </main>
+
+    <!-- Right Column: Sidebar (Potting-Bench Style) -->
+    <aside class="sidebar">
+      
+      <!-- Editorial Mission Widget -->
+      <div class="widget" id="about">
+        <h3 class="widget-title">About This Journal</h3>
+        <p class="widget-text">
+          An independent record of alpine ridges, wet forest trails, uncurated weather, and the physical stillness of walking high ground. No sponsored reviews or luxury travel guides — just what actually happened along the route.
+        </p>
+      </div>
+
+      <!-- Tag Cloud -->
+      <div class="widget" id="topics">
+        <h3 class="widget-title">Browse by Topic</h3>
+        <div class="tag-cloud">
+          <button class="tag-filter-btn active" onclick="filterByTag('all', this)">All</button>
+          <button class="tag-filter-btn" onclick="filterByTag('trails', this)">trails</button>
+          <button class="tag-filter-btn" onclick="filterByTag('fog', this)">fog</button>
+          <button class="tag-filter-btn" onclick="filterByTag('gear', this)">gear</button>
+          <button class="tag-filter-btn" onclick="filterByTag('monsoon', this)">monsoon</button>
+          <button class="tag-filter-btn" onclick="filterByTag('silence', this)">silence</button>
+          <button class="tag-filter-btn" onclick="filterByTag('summits', this)">summits</button>
+          <button class="tag-filter-btn" onclick="filterByTag('coffee', this)">coffee</button>
+        </div>
+      </div>
+
+      <!-- Recent Selected Notes -->
+      <div class="widget">
+        <h3 class="widget-title">Recent Entries</h3>
+        <ul class="recent-list">
+          <li>
+            <a class="recent-link" href="#fog" onclick="openStory(1)">
+              <img class="recent-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=150&q=80" alt="Fog" />
+              <div>
+                <h4>Ridge in Monsoon Fog</h4>
+                <span>Sept 24, 2026</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="recent-link" href="#gear" onclick="openStory(2)">
+              <img class="recent-img" src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=150&q=80" alt="Gear" />
+              <div>
+                <h4>The 18L Daypack Notes</h4>
+                <span>Aug 18, 2026</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="recent-link" href="#silence" onclick="openStory(3)">
+              <img class="recent-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=150&q=80" alt="Summit" />
+              <div>
+                <h4>Quietest Acre on the Ridge</h4>
+                <span>July 30, 2026</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Interactive Story Reader Modal -->
+  <div class="article-modal" id="storyModal" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-sheet">
+      <button class="close-button" onclick="closeStory()" aria-label="Close Note">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-title">The Fog & Ridge</div>
+    <p>© 2026 The Fog & Ridge. Static field publication hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+    // Story database
+    const storiesData = {
+      1: {
+        title: "The Early Morning Ridge in Thick Monsoon Fog",
+        meta: "September 24, 2026 • 4 min read • Western Escarpment",
+        image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=85",
+        tags: ["trails", "fog", "monsoon"],
+        body: `
+          <p>The alarm rang at 4:30 AM into complete stillness. Outside, cold rain was already beating against the glass. By the time I reached the trailhead, clouds had swept into the lower basin, erasing every familiar visual benchmark.</p>
+          <blockquote>When you cannot see the summit, you are forced to make peace with the single rock beneath your boot.</blockquote>
+          <p>Walking through heavy fog completely recalibrates sensory input. In clear weather, hiking is primarily visual: you track distant landmarks, scan approaching ridgelines, and calculate the miles left to cover. In zero-visibility mist, your ears take over.</p>
+          <h3>A Natural Sensory Reset</h3>
+          <p>You begin to notice the exact weight of water droplets dropping from pine clusters onto wet soil. The wind doesn’t feel like a vast gale; it whispers through wet scrub and whistles through cracks in the basalt. It is quiet, deliberate, and deeply restorative.</p>
+          <p>Three hours into the trek, the cloud deck fractured for barely thirty seconds, illuminating a glowing emerald valley before folding shut once more. A timely reminder that clear views are never gone — only briefly veiled.</p>
+        `
+      },
+      2: {
+        title: "What Stays in the 18L Daypack (And What I Left Behind)",
+        meta: "August 18, 2026 • 3 min read • Gear Philosophy",
+        image: "https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1600&q=85",
+        tags: ["gear", "boots", "minimalism"],
+        body: `
+          <p>During my first years on mountain trails, my pack weighed nearly 9 kilograms for a straightforward half-day hike. I carried duplicate lenses, heavy stainless flasks, extra jackets, and specialized tools that stayed untouched at the bottom of the bag.</p>
+          <h3>The Four Non-Negotiables</h3>
+          <p>Over thousands of vertical meters, the load was gradually pared down to what genuinely matters:</p>
+          <p><strong>1. Wide-Mouth Hydration Bottle (1L):</strong> Paired with an electrolyte sachet. Indestructible, lightweight, and fast to refill from mountain springs with a compact filter.</p>
+          <p><strong>2. 120-Gram Windshirt:</strong> Cuts bone-chilling summit wind without the stifling heat or bulk of heavy waterproof armor.</p>
+          <p><strong>3. Micro First-Aid Pouch:</strong> Micropore tape for hot spots, antiseptic swabs, antihistamines, and water purification tablets.</p>
+          <p><strong>4. High-Calorie Trail Rations:</strong> Roasted almonds, dates, and dark chocolate. Dense nutrition that stays fresh in any temperature.</p>
+        `
+      },
+      3: {
+        title: "The Quietest Acre on the Northern Ridge",
+        meta: "July 30, 2026 • 5 min read • High Ridge Notes",
+        image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=85",
+        tags: ["silence", "summits", "solo"],
+        body: `
+          <p>Everyday life surrounds us with a nonstop soundtrack: road friction, air handlers, distant sirens, and constant pinging devices. Even behind closed doors, absolute stillness is rare.</p>
+          <p>About two kilometers past the trail saddle on the Northern Ridge sits a recessed natural amphitheater between two basalt walls. The angle of the stone cliffs reflects valley noise away, creating an extraordinary acoustic dead-zone.</p>
+          <blockquote>Silence in the high mountains isn't an absence of life — it is the absence of unnecessary human noise.</blockquote>
+          <p>Standing there for half an hour, your nervous system resets. You hear the rustle of your sleeves and the quiet draft of a hawk soaring overhead. It is a potent reminder of how deeply we need unhurried, natural stillness.</p>
+        `
+      },
+      4: {
+        title: "Coffee at 6:00 AM in a Cold Enamel Mug",
+        meta: "June 12, 2026 • 3 min read • Morning Rituals",
+        image: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=1600&q=85",
+        tags: ["coffee", "camp", "morning"],
+        body: `
+          <p>In thin dawn air, water takes patience to reach a boil. The camp stove hisses quietly as mist drifts past the tent flaps, condensation beading on every surface.</p>
+          <p>Pouring hot water over freshly ground beans into an enamel mug is one of those small rituals that anchors an entire day outdoors. The cup warms cold fingers long before the caffeine reaches your system.</p>
+        `
+      }
+    };
+
+    function openStory(id) {
+      const story = storiesData[id];
+      if (!story) return;
+      const modal = document.getElementById('storyModal');
+      const content = document.getElementById('modalContent');
+
+      content.innerHTML = `
+        <img class="modal-banner" src="${story.image}" alt="${story.title}" />
+        <div class="modal-body">
+          <div class="modal-meta">${story.meta}</div>
+          <h1 class="modal-heading">${story.title}</h1>
+          <div class="tag-cluster" style="margin-bottom: 2rem;">
+            ${story.tags.map(t => `<span class="pill">${t}</span>`).join('')}
+          </div>
+          <div class="article-copy">
+            ${story.body}
+          </div>
+        </div>
+      `;
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeStory() {
+      document.getElementById('storyModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'storyModal') {
+        closeStory();
+      }
+    }
+
+    function filterArticles() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.story-card');
+      let visible = 0;
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+    }
+
+    function filterByTag(tag, btn) {
+      if (btn) {
+        document.querySelectorAll('.tag-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+
+      const cards = document.querySelectorAll('.story-card');
+      let visible = 0;
+
+      cards.forEach(card => {
+        const tags = card.getAttribute('data-tags') || '';
+        if (tag === 'all' || tags.includes(tag)) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+      window.scrollTo({ top: 320, behavior: 'smooth' });
+    }
+
+    function resetSearch() {
+      document.getElementById('searchInput').value = '';
+      filterByTag('all', document.querySelector('.tag-filter-btn'));
+    }
+
+    function scrollToWidget(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeStory();
+    });
+  </script>
+</body>
+</html>
